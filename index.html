@@ -9,6 +9,73 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        /* Mobile Responsiveness */
+        @media screen and (max-width: 768px) {
+            .nav-links {
+                position: absolute;
+                right: 0;
+                height: 100vh;
+                top: 0;
+                background-color: #fff;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 60%;
+                transform: translateX(100%);
+                transition: transform 0.3s ease-in-out;
+                box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+                z-index: 1000;
+            }
+            
+            .nav-links.active {
+                transform: translateX(0%);
+            }
+
+            .nav-links li {
+                margin: 20px 0;
+            }
+
+            .hamburger {
+                display: block !important;
+                z-index: 1001;
+                cursor: pointer;
+                font-size: 1.5rem;
+            }
+
+            .hero-container {
+                flex-direction: column-reverse;
+                text-align: center;
+                padding-top: 80px;
+            }
+
+            .hero-image {
+                width: 100%;
+                margin-bottom: 30px;
+                display: flex;
+                justify-content: center;
+            }
+            
+            .hero-image img {
+                max-width: 80%;
+                height: auto;
+            }
+
+            .about-content, .contact-content {
+                flex-direction: column;
+            }
+
+            .about-text, .education-timeline {
+                width: 100%;
+                margin-bottom: 30px;
+            }
+
+            .skills-grid, .projects-grid, .certificates-grid, .experience-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Navbar -->
