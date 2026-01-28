@@ -68,3 +68,25 @@ let isDeleting = false;
 
     setTimeout(type, typeSpeed);
 }());
+
+// Active Navigation Link on Scroll
+const sections = document.querySelectorAll('section');
+const navItems = document.querySelectorAll('.nav-links a');
+
+window.addEventListener('scroll', () => {
+    let current = '';
+    
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        if (window.scrollY >= (sectionTop - 150)) {
+            current = section.getAttribute('id');
+        }
+    });
+
+    navItems.forEach(a => {
+        a.classList.remove('active');
+        if (current && a.getAttribute('href').includes(current)) {
+            a.classList.add('active');
+        }
+    });
+});

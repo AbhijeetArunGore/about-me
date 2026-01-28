@@ -92,6 +92,7 @@
                     <li><a href="#certificates">Certificates</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
+                <button id="theme-toggle" class="theme-btn" aria-label="Toggle Dark Mode"><i class="fas fa-moon"></i></button>
                 <div class="hamburger">
                     <i class="fas fa-bars"></i>
                 </div>
@@ -113,6 +114,12 @@
             <div class="hero-image">
                 <img src="images/perf.jpg" alt="Abhijeet Gore" onerror="this.src='https://via.placeholder.com/400'">
             </div>
+        </div>
+        <div class="scroll-down">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>Scroll Down</span>
         </div>
     </section>
 
@@ -178,7 +185,7 @@
                 <div class="skill-card">
                     <i class="fas fa-code"></i>
                     <h3>Web Dev</h3>
-                    <p>HTML/CSS/JS/MERN</p>
+                    <p>UI Building</p>
                 </div>
                 <div class="skill-card">
                     <i class="fas fa-cloud"></i>
@@ -187,7 +194,7 @@
                 </div>
                 <div class="skill-card">
                     <i class="fas fa-chart-bar"></i>
-                    <h3>Data Viz</h3>
+                    <h3>Data visualization</h3>
                 </div>
             </div>
         </div>
@@ -484,11 +491,12 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({
-            duration: 1000,
+            duration: 1200,
             once: true
         });
     </script>
     <script src="tilt.js"></script>
+    <script src="darkmode.js"></script>
     <script src="main.js"></script>
 </body>
 </html>
